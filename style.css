@@ -1,0 +1,183 @@
+.gauss-matrix {
+  border-collapse: separate;
+  border-spacing: 0.3em;
+  margin: 0.5em auto 0.5em auto;
+  font-size: 1.1em;
+}
+.gauss-matrix td {
+  border: 1px solid #a78bfa;
+  padding: 0.3em 0.7em;
+  background: #23203a;
+  min-width: 2.5em;
+  text-align: center;
+}
+.gauss-matrix .pivote {
+  background: #f9a8d4 !important;
+  color: #23203a !important;
+  font-weight: bold;
+  border: 2px solid #f9a8d4;
+}
+.gauss-step {
+  margin-bottom: 1.2em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px dashed #a78bfa;
+}
+.gauss-op {
+  color: #d8b4fe;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+.gauss-sol {
+  margin-top: 1.2em;
+  font-size: 1.15em;
+  color: #f9a8d4;
+  font-weight: bold;
+}
+body {
+  background-color: #1e1b2e;
+  color: #e0d4ff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+nav {
+  background-color: #6d28d9;
+  padding: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #f3e8ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #ddd6fe;
+}
+
+.section {
+  display: none;
+  padding: 2em;
+}
+
+.active {
+  display: block;
+}
+
+.matrix-box, .system-box, .det-box {
+  background-color: #3f3c5c;
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1em;
+  box-shadow: 0 0 10px #6d28d9;
+}
+
+.matrix-row {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  margin-bottom: 1em;
+}
+
+table {
+  border-collapse: collapse;
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+}
+
+td {
+  border: 1px solid #a78bfa;
+  padding: 0.3em;
+}
+
+input[type="number"] {
+  width: 3.2em;
+  padding: 0.2em;
+  text-align: center;
+  border: 1px solid #a78bfa;
+  border-radius: 5px;
+  background-color: #1f1d2e;
+  color: #e0d4ff;
+}
+
+/* Quitar los botones de incremento y decremento */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.btn {
+  margin: 0.3em;
+  padding: 0.5em 1.2em;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #5b21b6;
+}
+
+.section-title {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #d8b4fe;
+}
+
+.result {
+  margin-top: 1em;
+  font-weight: bold;
+  text-align: center;
+  color: #f9a8d4;
+}
+
+.error {
+  color: #f87171;
+  font-weight: bold;
+}
+
+#matrixA, #matrixB {
+  margin: auto;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.botones-operacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.result {
+  padding: 20px;
+  background: #6b68a8;
+  border-radius: 8px;
+}
+
+.botones-ecuaciones, .botones-determinates {
+  width: fit-content;
+  margin: 10px auto;
+}

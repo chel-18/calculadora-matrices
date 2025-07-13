@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Matrices</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navegación -->
+  <nav>
+    <ul>
+      <li><a onclick="showSection('matrices')">Calculadora de matrices</a></li>
+      <li><a onclick="showSection('sistemas')">Sistemas de ecuaciones</a></li>
+      <li><a onclick="showSection('determinantes')">Determinantes</a></li>
+    </ul>
+  </nav>  <!-- Sección de matrices -->  <div id="matrices" class="section active">
+    <div class="section-title">Calculadora de Matrices</div>
+    <div class="matrix-box">
+      <div class="matrix-row">
+        <div>
+          <div style="text-align:center; font-weight:bold; margin-bottom:0.5em;">Matriz A</div>
+          <div id="matrixA"></div>
+          <div style="text-align:center;">
+            <div class="botones-mas-menos">
+              <button class="btn" onclick="increaseMatrix('A')">+</button>
+              <button class="btn" onclick="decreaseMatrix('A')">-</button>
+            </div>
+            <div class="botones-operacion">
+              <button class="btn" onclick="matrixDet('A')">Determinante</button>
+              <button class="btn" onclick="matrixInverse('A')">Matriz Inversa</button>
+              <button class="btn" onclick="matrixTrans('A')">Matriz Transpuesta</button>
+              <button class="btn" onclick="matrixRango('A')">Rango</button>
+              <button class="btn" onclick="matrixEscalar('A', 2)">Multiplicar por 2</button>
+              <button class="btn" onclick="matrixTriangular('A')">Matriz Triangular</button>
+              <button class="btn" onclick="matrixDiagonal('A')">Matriz Diagonal</button>
+              <button class="btn" onclick="matrixPotencia('A', 2)">Matriz elevada a 2</button>
+            </div>
+          </div>
+          <!-- Resultado debajo de la matriz A -->
+          <div id="resultA" class="result" style="margin-top:1em;"></div>
+        </div><div>
+      <div style="text-align:center; font-weight:bold; margin-bottom:0.5em;">Matriz B</div>
+      <div id="matrixB"></div>
+      <div style="text-align:center;">
+        <div class="botones-mas-menos">
+          <button class="btn" onclick="increaseMatrix('B')">+</button>
+          <button class="btn" onclick="decreaseMatrix('B')">-</button>
+        </div>
+        <div class="botones-operacion">
+          <button class="btn" onclick="matrixDet('B')">Determinante</button>
+          <button class="btn" onclick="matrixInverse('B')">Matriz Inversa</button>
+          <button class="btn" onclick="matrixTrans('B')">Matriz Transpuesta</button>
+          <button class="btn" onclick="matrixRango('B')">Rango</button>
+          <button class="btn" onclick="matrixEscalar('B', 2)">Multiplicar por 2</button>
+          <button class="btn" onclick="matrixTriangular('B')">Matriz Triangular</button>
+          <button class="btn" onclick="matrixDiagonal('B')">Matriz Diagonal</button>
+          <button class="btn" onclick="matrixPotencia('B', 2)">Matriz elevada a 2</button>
+        </div>
+      </div>
+      <!-- Resultado debajo de la matriz B -->
+      <div id="resultB" class="result" style="margin-top:1em;"></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <button class="btn" onclick="operateMatrices('sum')">Sumar</button>
+    <button class="btn" onclick="operateMatrices('sub')">Restar</button>
+    <button class="btn" onclick="operateMatrices('mul')">Multiplicar</button>
+    <button class="btn" onclick="clearMatrix()">Limpiar</button>
+  </div>
+
+  <div id="matrix-result" class="result"></div>
+</div>
+
+  </div>  <!-- Sección de sistemas de ecuaciones -->  <div id="sistemas" class="section">
+    <div class="section-title">Solución de Sistemas de Ecuaciones</div>
+    <div class="system-box">
+      <div id="system-container"></div>
+      <div class="botones-ecuaciones">
+        <button class="btn" onclick="increaseSystem()">+</button>
+        <button class="btn" onclick="decreaseSystem()">-</button>
+        <button class="btn" onclick="clearSystem()">Limpiar</button>
+        <button class="btn" onclick="solveSystem()">Resolver</button>
+        <div class="result" id="system-result"></div>
+        <div class="result" id="method-process"></div>
+        <button class="btn" onclick="showMethodOptions()">Métodos</button>
+          <button class="btn" onclick="applyGaussJordan()">Gauss-Jordan</button>
+          <button class="btn" onclick="applyMatrixInverse()">Inversa de Matriz</button>
+          <button class="btn" onclick="applyCramerRule()">Regla de Cramer</button>
+          <button class="btn" onclick="applyRoucheFrobenius()">Rouché-Frobenius</button>
+        <div id="method-options" style="display:none; margin-top:1em;">
+
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Sección de determinantes -->  <div id="determinantes" class="section">
+    <div class="section-title">Calculadora de Determinantes</div>
+    <div class="det-box">
+      <div id="det-matrix"></div>
+      <div class="botones-determinates">
+        <button class="btn" onclick="increaseDet()">+</button>
+        <button class="btn" onclick="decreaseDet()">-</button>
+        <button class="btn" onclick="clearDet()">Limpiar</button>
+        <button class="btn" onclick="calculateDet()">Calcular Determinante</button>
+        <button class="btn" onclick="detSarrus()">Sarrus</button>
+        <button class="btn" onclick="detGauss()">Gauss</button>
+        <button class="btn" onclick="detLeibniz()">Leibniz</button>
+      </div>
+      <div class="result" id="det-result"></div>
+    </div>
+  </div>  <!-- Script -->  <script src="calculadora.js"></script></body>
+</html>
