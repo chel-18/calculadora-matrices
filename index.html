@@ -37,6 +37,9 @@
           </div>
           <!-- Resultado debajo de la matriz A -->
           <div id="resultA" class="result" style="margin-top:1em;"></div>
+          <div style="text-align:center; margin-top:0.5em;">
+            <button class="btn" onclick="document.getElementById('resultA').innerHTML = ''">Limpiar solución A</button>
+          </div>
         </div><div>
       <div style="text-align:center; font-weight:bold; margin-bottom:0.5em;">Matriz B</div>
       <div id="matrixB"></div>
@@ -58,6 +61,9 @@
       </div>
       <!-- Resultado debajo de la matriz B -->
       <div id="resultB" class="result" style="margin-top:1em;"></div>
+      <div style="text-align:center; margin-top:0.5em;">
+        <button class="btn" onclick="document.getElementById('resultB').innerHTML = ''">Limpiar solución B</button>
+      </div>
     </div>
   </div>
 
@@ -106,6 +112,9 @@
         <button class="btn" onclick="detLeibniz()">Leibniz</button>
       </div>
       <div class="result" id="det-result"></div>
+      <div style="text-align:center; margin-top:0.5em;">
+        <button class="btn" onclick="document.getElementById('det-result').innerHTML = ''">Limpiar solución determinante</button>
+      </div>
     </div>
   </div>  <!-- Script -->  <script src="calculadora.js"></script></body>
 </html>
